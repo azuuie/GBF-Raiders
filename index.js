@@ -319,11 +319,11 @@ if ( cluster.isMaster ) {
 				key: fs.readFileSync( __dirname + '/sslcert/privkey.pem' )
 			};
 			let sslServer = https.createServer( options );
-			sslServer.listen( 8080 );
+			sslServer.listen( 80 );
 			io = require( 'socket.io' ).listen( sslServer );
 		} else {
 			let server = require( 'http' ).createServer();
-			server.listen( 8080 );
+			server.listen( 80 );
 			io = require( 'socket.io' ).listen( server );
 		}
 		io.sockets.on( 'connection', function ( socket ) {
