@@ -416,5 +416,5 @@ if ( cluster.isMaster ) {
 			localStats.shift();
 		}
 	} );
-	require( 'http' ).createServer( app ).listen( 80 );
+	require( 'http' ).createServer( app ).listen( 8000 );
 }
